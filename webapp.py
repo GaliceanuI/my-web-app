@@ -8,9 +8,9 @@ def add_todo():
     functions.write_todos(todos)
 
 
-st.title("Te IUBESC <3")
-st.subheader("Cu drag Iulian.")
-st.write("aici am scris mai mic :)).")
+st.title("Ce faceti mama draga ?")
+st.subheader("Cu drag Mami.")
+st.write("Va las o lista mai jos: ")
 
 for index, todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)
@@ -21,5 +21,5 @@ for index, todo in enumerate(todos):
         st.experimental_rerun()
 
 
-st.text_input(label="", placeholder="Add new todo...",
+st.text_input(label="", placeholder="Scrie aici mama...",
               on_change=add_todo, key='new_todo')
