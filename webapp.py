@@ -8,9 +8,9 @@ def add_todo():
     functions.write_todos(todos)
 
 
-st.title("Ce faceti mama draga ?")
-st.subheader("Cu drag Mami.")
-st.write("Va las o lista mai jos: ")
+st.title("Uplift CRQ Scheduler.")
+st.subheader("This is a ToDo app used for the Uplift Project.")
+st.write("Format : CRQ(nr) - date - implementer/s ")
 
 for index, todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)
@@ -21,5 +21,5 @@ for index, todo in enumerate(todos):
         st.experimental_rerun()
 
 
-st.text_input(label="", placeholder="Scrie aici mama...",
+st.text_input(label="", placeholder="Add new CRQ...",
               on_change=add_todo, key='new_todo')
